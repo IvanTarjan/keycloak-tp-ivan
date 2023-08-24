@@ -1,0 +1,6 @@
+{
+"usuario": "usuario",
+"contraseña": "usuario",
+"rol": "USER",
+"gateway-endpoint": "http://localhost:9090/bills/all"
+}

@@ -1,0 +1,39 @@
+# Configuraciones del servidor
+server:
+  port: 9090
+# Configuraciones de eureka
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+# Configuraciones de spring cloud
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    gateway:
+      default-filters: TokenRelay
+      routes:
+        - id: ms-bill
+          uri: lb://ms-bill
+          predicates:
+            - Path=/bills/**
+
+  security:
+    oauth2:
+      client:
+        provider:
+          api-gateway-service:
+            issuer-uri: http://localhost:8080/realms/ivanRealm
+        registration:
+          api-gateway-service:
+            client-id: gateway-client
+            client-secret: 6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF
+            scope: openid
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:9090/login/oauth2/code/keycloak
