@@ -17,4 +17,8 @@ public class BillService {
         return repository.findAll();
     }
 
+    public Bill postBill(Bill bill){ return repository.save(bill);}
+
+    public List<Bill> getBillsByCustomerId(String id){ return repository.findByCustomerBill(id);}
+
 }

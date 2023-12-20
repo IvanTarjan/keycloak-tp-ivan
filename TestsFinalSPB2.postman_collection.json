@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "6fe11187-0c3e-4d25-ad16-3658ff353418",
+		"name": "TestsFinalSPB2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23379389"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/users/new",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"demeter\",\r\n    \"email\": \"Elmail@gmail.com\",\r\n    \"firstName\": \"demeter\",\r\n    \"password\": \"asdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/users/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:8081/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/users/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:8081/users/d1067e50-c960-4414-8f1a-38347636cc40",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"d1067e50-c960-4414-8f1a-38347636cc40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:56359/bills/all",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"http://localhost:8761/eureka/v2/apps/ms-bill\", function(err, res){\r",
+							"    pm.collectionVariables.set(\"billsPort\", xml2Json(res.text()).application.instance.port._)\r",
+							"    console.log(xml2Json(res.text()).application.instance.port._)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:{{billsPort}}/bills/all",
+					"host": [
+						"localhost"
+					],
+					"port": "{{billsPort}}",
+					"path": [
+						"bills",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:56359/bills/userId",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"http://localhost:8761/eureka/v2/apps/ms-bill\", function(err, res){\r",
+							"    pm.collectionVariables.set(\"billsPort\", xml2Json(res.text()).application.instance.port._)\r",
+							"    console.log(xml2Json(res.text()).application.instance.port._)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:{{billsPort}}/bills/d1067e50-c960-4414-8f1a-38347636cc40",
+					"host": [
+						"localhost"
+					],
+					"port": "{{billsPort}}",
+					"path": [
+						"bills",
+						"d1067e50-c960-4414-8f1a-38347636cc40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:56359/bills/userId Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"http://localhost:8761/eureka/v2/apps/ms-bill\", function(err, res){\r",
+							"    pm.collectionVariables.set(\"billsPort\", xml2Json(res.text()).application.instance.port._)\r",
+							"    console.log(xml2Json(res.text()).application.instance.port._)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/realms/ivanRealm/protocol/openid-connect/auth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:9090/login/oauth2/code/keycloak",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "6Z6YrEbXgmV1K2j5jdWdKksIDOB9k7eF",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demeter",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerBill\": \"d1067e50-c960-4414-8f1a-38347636cc40\",\r\n    \"productBill\": \"ProductoPrueba\",\r\n    \"totalPrice\" : 45.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{billsPort}}/bills/new",
+					"host": [
+						"localhost"
+					],
+					"port": "{{billsPort}}",
+					"path": [
+						"bills",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "billsPort",
+			"value": "49469",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,35 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/realms/ivanRealm/protocol/openid-connect/token
+            issuer-uri: http://localhost:8080/realms/ivanRealm
+        registration:
+          keycloak:
+            client-id: users-service
+            client-secret: aLJUaK6gsd82LNzKs6jUWOyMKiZAtdOC
+            authorization-grant-type: client_credentials
+            scope: openid
+            redirect-uri: http://localhost:${spring.application.name}/login/oauth2/code/keycloak
+  application:
+    name: ms-users
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8081
+
+final:
+  keycloak:
+    serverUrl: http://localhost:8080/
+    realm: ivanRealm
+    clientId: users-service
+    clientSecret: aLJUaK6gsd82LNzKs6jUWOyMKiZAtdOC

@@ -1,6 +1,7 @@
 {
-"usuario": "usuario",
-"contraseña": "usuario",
-"rol": "USER",
-"gateway-endpoint": "http://localhost:9090/bills/all"
+"usuario": "user",
+"contraseña": "user",
+"rol": "USER"
 }
+
+las pruebas estan en postman

@@ -42,4 +42,4 @@ eureka:
           keycloak:
             client-id: bills-client
             client-secret: MGJIEdihxP0xzP6SqPXB1h74rynDCLvR
-            redirect-uri: http://localhost:${spring.application.name}/login/oauth2/code/google
+            redirect-uri: http://localhost:${spring.application.name}/login/oauth2/code/keycloak
